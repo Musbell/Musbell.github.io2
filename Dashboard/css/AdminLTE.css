@@ -509,7 +509,7 @@ body > .header .logo .icon {
 .sidebar {
   margin-bottom: 5px;
   background-color:white;
-  background-image:url('../../login/map.png');
+  background-image:url('../../map.png');
   background-size:cover;
 }
 .sidebar .sidebar-form input:focus {
