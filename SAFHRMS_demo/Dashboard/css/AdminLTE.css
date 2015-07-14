@@ -8,6 +8,8 @@
  *           Please visit http://opensource.org/licenses/MIT for more information
 !*/
 /*
+
+  
     Core: General style
 ----------------------------
 */
@@ -339,6 +341,9 @@ body > .header .navbar {
   height: 50px;
   margin-bottom: 0;
   margin-left: 220px;
+  background: #50a3a2;
+  background: -webkit-linear-gradient(top left, #50a3a2 0%, #4E8FE3 100%);
+  background: linear-gradient(to bottom right, #50a3a2 0%, #4E8FE3 100%);
 }
 body > .header .navbar .sidebar-toggle {
   float: left;
@@ -503,6 +508,9 @@ body > .header .logo .icon {
 */
 .sidebar {
   margin-bottom: 5px;
+  background-color:white;
+  background-image:url('../../login/map.png');
+  background-size:cover;
 }
 .sidebar .sidebar-form input:focus {
   -webkit-box-shadow: none;

@@ -135,7 +135,7 @@ $(function() {
     });
 
     /* For demo purposes */
-    var demo = $("<div />").css({
+   /* var demo = $("<div />").css({
         position: "fixed",
         top: "150px",
         right: "0",
@@ -189,6 +189,7 @@ $(function() {
             + "</div>"
             + "</div>"
             );
+            */
 
     demo.click(function() {
         if (!$(this).hasClass("open")) {
