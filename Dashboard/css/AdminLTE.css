@@ -2497,10 +2497,13 @@ Component: timeline
   background: #f9f9f9;
 }
 .skin-blue .left-side {
-  background: #f4f4f4;
+  background: white;
   -webkit-box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.1);
   box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.07);
+  background-image:url(../../map.png);
+  background-size:cover;
+  background-repeat:repeat-y;
 }
 .skin-blue .sidebar a {
   color: #555555;
