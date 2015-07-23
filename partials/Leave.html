@@ -1,137 +1,116 @@
 
+<div class="row">
+    <div class="col-lg-4">
+        <div class="panel panel-default box box-info">
+            <div class="panel-body">
+                <div class="page-header">
+                    <small>Staff</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="panel panel-default box box-info">
+            <div class="panel-body">
+                <div class="page-header">
+                    <small>Assign leave</small>
+                </div>
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="panel panel-default box box-info">
-                            <div class="panel-body">
-                                <div class="page-header">
-                                    <small>Staff</small>
-                                </div>
-
-
-                            </div>
-                        </div>
+                    <div class="col-lg-2">
                     </div>
                     <div class="col-lg-8">
-                        <div class="panel panel-default box box-info">
-                            <div class="panel-body">
-                                <div class="page-header">
-                                    <small>Assign leave</small>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="employee" class="col-sm-2 control-label">Employee</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="employee" placeholder="Employee" data-ng-model="newLeave.name">
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-2">
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <form class="form-horizontal">
-                                            <div class="form-group">
-                                                <label for="employee" class="col-sm-2 control-label">Employee</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="employee" placeholder="Employee">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="leaveType" class="col-sm-2 control-label">Leave type</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="leaveType" placeholder="Leave type">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="startDate" class="col-sm-2 control-label">Start date</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="startDate" placeholder="Start date">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="endDate" class="col-sm-2 control-label">End date</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="endDate" placeholder="End date">
-                                                </div>
-                                            </div>
-
-                                            <div class="pull-right">
-                                                <button class="btn btn-success btn-flat btn-group-lg">save</button>
-                                                <button type="reset" class="btn btn-danger btn-flat btn-group-lg">Cancel</button>
-                                            </div>
-                                        </form>
-
-                                    </div>
-                                    <div class="col-lg-2"></div>
-
+                            </div>
+                            <div class="form-group">
+                                <label for="leaveType" class="col-sm-2 control-label">Leave type</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="leaveType" placeholder="Leave type" data-ng-model="newLeave.leaveType">
                                 </div>
-
+                            </div>
+                            <div class="form-group">
+                                <label for="leaveBenefits" class="col-sm-2 control-label">Leave type</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="leaveBenefits" placeholder="Leave benefits" data-ng-model="newLeave.leaveBenefits">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="startDate" class="col-sm-2 control-label">Start date</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="startDate" placeholder="Start date" data-ng-model="newLeave.startDate">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="endDate" class="col-sm-2 control-label">End date</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="endDate" placeholder="End date" data-ng-model="newLeave.endDate">
+                                </div>
+                            </div>
+                            <div class="pull-right">
+                                <button class="btn btn-success btn-flat btn-group-lg" data-ng-click="addLeave()">save</button>
+                                <button type="reset" class="btn btn-danger btn-flat btn-group-lg">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default box box-info">
+            <div class="panel-body">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <small>Staff leave</small>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <div>
+                                    <input type="text" class="form-control" id="form-group-input" placeholder="search" ng-model="filter.name">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default box box-info">
-                            <div class="panel-body">
-                                <div class="page-header">
-                                    <small>Staff leave</small>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-1"></div>
-                                    <div class="col-lg-10">
-                                        <table class="table-responsive table table-hover table-condensed">
-                                            <thead class="info">
-                                            <th>#</th>
-                                            <th>Employee</th>
-                                            <th>Leave type</th>
-                                            <th>Leave benefits</th>
-                                            <th>Start date</th>
-                                            <th>End date</th>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="info">
-                                                    <th scope="row">1</th>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr class="info">
-                                                    <th scope="row">3</th>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr class="info">
-                                                    <th scope="row">5</th>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="pull-right">
-                                            <button class="btn btn-success btn-flat btn-group-lg">Finish</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-1"></div>
-                                </div>
-                            </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <table class="table-responsive table table-hover table-condensed">
+                            <thead>
+                            <th>#</th>
+                            <th>Employee</th>
+                            <th>Leave type</th>
+                            <th>Leave benefits</th>
+                            <th>Start date</th>
+                            <th>End date</th>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="leave in leaveData | filter:filter.name | limitTo:5" class="repeat-animation">
+                                    <th scope="row">*</th>
+                                    <td ng-bind="leave.name"></td>
+                                    <td ng-bind="leave.leave_type"></td>
+                                    <td ng-bind="leave.leave_benefits"></td>
+                                    <td ng-bind="leave.start_date"></td>
+                                    <td ng-bind="leave.end_date"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pull-right">
+                            <button class="btn btn-success btn-flat btn-group-lg" ng-click="finish()">Finish</button>
                         </div>
                     </div>
+                    <div class="col-lg-1"></div>
                 </div>
-          
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -3,7 +3,8 @@
        'ngRoute',
        'ngAnimate',
        'profView',
-       'profDetail'
+       'profDetail',
+       'leaveModule'
    ])
 
    .config(['$routeProvider',
