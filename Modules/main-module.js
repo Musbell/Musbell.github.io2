@@ -4,7 +4,8 @@
        'ngAnimate',
        'profView',
        'profDetail',
-       'leaveModule'
+       'leaveModule',
+       'profDetail'
    ])
 
    .config(['$routeProvider',
@@ -12,7 +13,7 @@
             $routeProvider.
                when('/profile view', {
                    templateUrl: '../../../partials/profile view.html',
-                   controller: 'ProfViewCtrl'
+                   controller: 'PersonalDetailsCtrl'
                }).
             when('/personal details update', {
                 templateUrl: '../../../partials/personal details.html',
