@@ -47,14 +47,15 @@
                             </div>
                         </form>
                         <br />
-                        <button class="btn" id="tog">Toggle table</button>
+                        <div class="view-slide-in">
+                        <button class="btn" ng-click="toggleTable()">Toggle table</button></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="row" id="tab">
+<div class="row" ng-hide="tab">
     <div class="col-lg-12">
         <div class="panel panel-default box box-info">
             <div class="panel-body">
@@ -107,10 +108,4 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    $("#tog").click(function () {
-        $("#tab").toggle("slow", function () {
-            // Animation complete.
-        });
-    });
-</script>
+<div ng-show="tab"></div>

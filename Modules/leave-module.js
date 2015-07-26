@@ -41,7 +41,10 @@ function ($scope, $location, $routeParams, $http) {
     $scope.cancelEdit_leave = function () {
         $location.path('/leave')
     }
-   
+    $scope.tab = true;
+    $scope.toggleTable = function () {
+        $scope.tab = $scope.tab === false ? true : false;
+    }
 }
 
 ])
