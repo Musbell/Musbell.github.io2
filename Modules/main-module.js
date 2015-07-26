@@ -5,7 +5,8 @@
        'profView',
        'profDetail',
        'leaveModule',
-       'profDetail'
+       'profDetail',
+       'PromotionModule'
    ])
 
    .config(['$routeProvider',

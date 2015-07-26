@@ -30,10 +30,13 @@
     };
 
     $scope.finish = function () {
-        $location.path('../../../partials/profile view.html')
+        $location.path('/profile view')
     };
 
-
+    $scope.tab = true;
+    $scope.toggleTable = function () {
+        $scope.tab = $scope.tab === false ? true : false;
+    }
 }
 
 ])

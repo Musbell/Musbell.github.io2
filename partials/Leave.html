@@ -48,14 +48,15 @@
                         </form>
                         <br />
                         <div class="view-slide-in">
-                        <button class="btn" ng-click="toggleTable()">Toggle table</button></div>
+                        <button class="btn" ng-click="toggleTable()">Toggle table</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="row" ng-hide="tab">
+<div class="row view-slide-in" ng-hide="tab">
     <div class="col-lg-12">
         <div class="panel panel-default box box-info">
             <div class="panel-body">
@@ -108,4 +109,4 @@
         </div>
     </div>
 </div>
-<div ng-show="tab"></div>
+<div ng-show="tab" class="view-slide-in"></div>

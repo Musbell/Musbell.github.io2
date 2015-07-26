@@ -1,16 +1,6 @@
 ﻿
 <div class="row">
-    <div class="col-lg-4">
-        <div class="panel panel-default box box-info">
-            <div class="panel-body">
-                <div class="page-header">
-                    <small>Staff</small>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-8">
+    <div class="col-lg-12">
         <div class="panel panel-default box box-info">
             <div class="panel-body">
                 <div class="page-header">
@@ -48,14 +38,18 @@
                             <div class="form-group">
                                 <label for="comment" class="col-sm-2 control-label">Comment</label>
                                 <div class="col-sm-10">
-                                    <textarea placeholder="Comment"></textarea>
+                                    <textarea placeholder="Comment" cols="70"></textarea>
                                 </div>
                             </div>
                             <div class="pull-right">
-                                <button class="btn btn-success btn-flat btn-group-lg">save</button>
+                                <button class="btn btn-facebook btn-flat btn-group-lg">save</button>
                                 <button type="reset" class="btn btn-danger btn-flat btn-group-lg">Cancel</button>
                             </div>
                         </form>
+                        <br /><br />
+                        <div class="view-slide-in">
+                            <button class="btn" ng-click="toggleTable()">Toggle table</button>
+                        </div>
                     </div>
                     <div class="col-lg-2"></div>
                 </div>
@@ -63,7 +57,7 @@
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row" ng-hide="tab">
     <div class="col-lg-12">
         <div class="panel panel-default box box-info">
             <div class="panel-body">
@@ -96,7 +90,7 @@
                             </tbody>
                         </table>
                         <div class="pull-right">
-                            <button class="btn btn-success btn-flat btn-group-lg">Finish</button>
+                            <button class="btn btn-facebook btn-flat btn-group-lg">Finish</button>
                         </div>
                     </div>
                     <div class="col-lg-1"></div>
@@ -105,3 +99,4 @@
         </div>
     </div>
 </div>
+    <div ng-show="tab" class="view-slide-in"></div>
