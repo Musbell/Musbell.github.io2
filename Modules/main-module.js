@@ -11,14 +11,14 @@
    .config(['$routeProvider',
         function ($routeProvider) {
             $routeProvider.
-               when('/profile view', {
-                   templateUrl: '../../../partials/profile view.html',
-                   controller: 'PersonalDetailsCtrl'
-               }).
-            when('/personal details update', {
-                templateUrl: '../../../partials/personal details.html',
-                controller: 'PersonalDetailsCtrl'
-            }).
+                 when('/profile view', {
+                     templateUrl: '../../../partials/profile view.html',
+                     controller: 'PersonalDetailsCtrl'
+                 }).
+                 when('/personal details update', {
+                     templateUrl: '../../../partials/personal details.html',
+                     controller: 'PersonalDetailsCtrl'
+                 }).
                  when('/educational background update', {
                      templateUrl: '../../../partials/educational background.html',
                      controller: 'EduBackgroundCtrl'
@@ -43,10 +43,18 @@
                      templateUrl: '../../../partials/promotion.html',
                      controller: 'PromotionCtrl'
                  }).
-    when("/personal details update/:index", {
-        controller: "editPersonalDetailsCtrl",
-        templateUrl: "../../../partials/personal details.html"
-    }).
+                 when("/educational background update/:index", {
+                     controller: "editEduBackgroundCtrl",
+                     templateUrl: "../../../Edit pages/Edit_educational background.html"
+                 }).
+                 when("/Leave update/:index", {
+                     controller: "LeaveCtrl",
+                     templateUrl: "../../../Edit pages/Edit_Leave.html"
+                 }).
+                 when("/Promotion update/:index", {
+                     controller: "editPromotionCtrl",
+                     templateUrl: "../../../Edit pages/Edit_promotion.html"
+                 }).
                otherwise({
                    redirectTo: '/profile view'
                });
