@@ -343,9 +343,9 @@ body > .header .navbar {
   height: 50px;
   margin-bottom: 0;
   margin-left: 220px;
-  background: #50a3a2;
-  background: -webkit-linear-gradient(top left, #50a3a2 0%, #4E8FE3 100%);
-  background: linear-gradient(to bottom right, #50a3a2 0%, #4E8FE3 100%);
+  background: #3b5998;
+  background: #3b5998;
+  background: #3b5998;
 }
 body > .header .navbar .sidebar-toggle {
   float: left;
@@ -2450,14 +2450,14 @@ Component: timeline
 }
 /* skin-blue logo */
 .skin-blue .logo {
-  background-color: #367fa9;
+  background-color: #8b9dc3;
   color: #f9f9f9;
 }
 .skin-blue .logo > a {
   color: #f9f9f9;
 }
 .skin-blue .logo:hover {
-  background: #357ca5;
+  background: #8b9dc3;
 }
 /* skin-blue content header */
 .skin-blue .right-side > .content-header {
