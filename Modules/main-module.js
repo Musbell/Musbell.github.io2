@@ -35,11 +35,11 @@
                      templateUrl: '../../../partials/health details.html',
                      controller: 'HealthDetailsCtrl'
                  }).
-                 when('/leave', {
+                 when('#/leave', {
                      templateUrl: '../../../partials/leave.html',
                      controller: 'LeaveCtrl'
                  }).
-                 when('/promotion', {
+                 when('#/promotion', {
                      templateUrl: '../../../partials/promotion.html',
                      controller: 'PromotionCtrl'
                  }).
