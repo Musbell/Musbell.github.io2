@@ -45,6 +45,10 @@ function ($scope, $location, $routeParams, $http) {
     $scope.toggleTable = function () {
         $scope.tab = $scope.tab === false ? true : false;
     }
+    $scope.remove = function (leave) {
+        i = $scope.leaveData.indexOf(leave);
+        $scope.leaveData.splice(i, 1);
+    }
 }
 
 ])

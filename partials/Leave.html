@@ -42,8 +42,8 @@
                                 </div>
                             </div>
                             <div class="pull-right">
-                                <button class="btn btn-facebook btn-group-lg" data-ng-click="addLeave()">save</button>
-                                <button type="reset" class="btn btn-google-plus  btn-group-lg">Cancel</button>
+                                <button class="btn btn-flat btn-facebook btn-group-lg" data-ng-click="addLeave()">save</button>
+                                <button type="reset" class="btn btn-google-plus btn-flat btn-group-lg">Cancel</button>
                             </div>
                         </form>
                         <br />
@@ -77,6 +77,10 @@
                 <div class="row" id="tab">
                     <div class="col-lg-1"></div>
                     <div class="col-lg-10">
+                        <div class="view-slide-in">
+                            <button class="btn" ng-click="toggleTable()">Manage table</button>
+                        </div>
+                        <br />
                         <table class="table-responsive table table-hover table-condensed">
                             <thead>
                             <th>#</th>
@@ -88,19 +92,19 @@
                             <th></th>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="leave in leaveData | filter:filter.name | limitTo:5 | orderBy:sortField:reverse" ng-click="editLeave($index)" class="repeat-animation">
-                                    <th scope="row">*</th>
+                                <tr ng-repeat="leave in leaveData | filter:filter.name | limitTo:5 | orderBy:sortField:reverse" /*ng-click="!editLeave($index)"*/ class="repeat-animation">
+                                    <th scope="row"><span class="glyphicon glyphicon-user"></span></th>
                                     <td ng-bind="leave.employee_id"></td>
                                     <td ng-bind="leave.leave_type"></td>
                                     <td ng-bind="leave.leave_benefits"></td>
                                     <td ng-bind="leave.start_date"></td>
                                     <td ng-bind="leave.end_date"></td>
-                                    <td ng-click="remove(id)"><span class="glyphicon-remove"></span></td>
+                                    <td ng-click="remove(id)"><a href=""><span class="glyphicon glyphicon-remove"></span></a></td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="pull-right">
-                            <button class="btn btn-google-plus btn-group-lg" ng-click="finish()">Finish</button>
+                            <button class="btn btn-flat btn-facebook btn-group-lg" ng-click="finish()">Finish</button>
                         </div>
                     </div>
                     <div class="col-lg-1"></div>
