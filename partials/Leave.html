@@ -1,5 +1,4 @@
-
-<div class="row" ng-show ="hideForm">
+<div class="row" ng-show="hideForm">
     <div class="col-lg-12">
         <div class="panel panel-default box box-info">
             <div class="panel-body">
@@ -46,9 +45,10 @@
                                 <button type="reset" class="btn btn-google-plus btn-flat btn-group-lg">Cancel</button>
                             </div>
                         </form>
-                        <br />
+                    </div>
+                    <div class="col-lg-2">
                         <div class="view-slide-in">
-                        <button class="btn" ng-click="toggleTable()">Toggle table</button>
+                            <button class="btn" ng-click="toggleTable()">Toggle table</button>
                         </div>
                     </div>
                 </div>
@@ -56,6 +56,7 @@
         </div>
     </div>
 </div>
+
 <div ng-hide="hideForm" class="view-slide-in"></div>
 <div class="row view-slide-in" ng-hide="tab">
     <div class="col-lg-12">
@@ -77,12 +78,8 @@
                 </div>
                 <div class="row" id="tab">
                     <div class="col-lg-1"></div>
-                    <div class="col-lg-10">
-                        <div class="view-slide-in">
-                            <button class="btn" ng-click="manageTable()">Toggle form</button>
-                        </div>
-                        <br />
-                        <table class="table-responsive table table-hover table-condensed">
+                    <div class="col-lg-9">
+                        <table class="table-responsive table table-hover ">
                             <thead>
                             <th>#</th>
                             <th><a href="" ng-click="sortField = 'employee_id'; reverse = !reverse">Employee id</a></th>
@@ -93,14 +90,14 @@
                             <th></th>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="leave in leaveData | filter:filter.name | limitTo:10 | orderBy:sortField:reverse"  class="repeat-animation">
+                                <tr ng-repeat="leave in leaveData | filter:filter.name | limitTo:10 | orderBy:sortField:reverse" class="repeat-animation">
                                     <th scope="row"><span class="glyphicon glyphicon-user"></span></th>
                                     <td ng-bind="leave.employee_id"></td>
                                     <td ng-bind="leave.leave_type"></td>
                                     <td ng-bind="leave.leave_benefits"></td>
                                     <td ng-bind="leave.start_date"></td>
                                     <td ng-bind="leave.end_date"></td>
-                                    <td ng-click="remove(id)"><a href=""><span class="glyphicon glyphicon-remove"></span></a></td>
+                                    <td ng-click="remove(id)"><a href=""><span style="color:red" class="glyphicon glyphicon-remove"></span></a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -108,7 +105,11 @@
                             <button class="btn btn-flat btn-facebook btn-group-lg" ng-click="finish()">Finish</button>
                         </div>
                     </div>
-                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2">
+                        <div class="view-slide-in">
+                            <button class="btn" ng-click="manageTable()">Toggle form</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
