@@ -49,6 +49,11 @@ function ($scope, $location, $routeParams, $http) {
         i = $scope.leaveData.indexOf(leave);
         $scope.leaveData.splice(i, 1);
     }
+
+    $scope.hideForm = true;
+    $scope.manageTable = function () {
+        $scope.hideForm = $scope.hideForm === true ? false : true;
+    }
 }
 
 ])

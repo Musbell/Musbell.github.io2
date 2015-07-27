@@ -8,8 +8,7 @@
        'profDetail',
        'PromotionModule'
    ])
-
-   .config(['$routeProvider',
+       .config(['$routeProvider',
         function ($routeProvider) {
             $routeProvider.
                  when('/profile view', {
@@ -55,6 +54,10 @@
                  when("/Promotion update/:index", {
                      controller: "editPromotionCtrl",
                      templateUrl: "../../../Edit pages/Edit_promotion.html"
+                 }).
+                 when("/Leave table", {
+                     controller: "LeaveCtrl",
+                     templateUrl: "../../../tables/LeaveTable.html"
                  }).
                otherwise({
                    redirectTo: '/profile view'
