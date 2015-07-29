@@ -2,8 +2,7 @@
    [
        'ngRoute',
        'ngAnimate',
-       'profView',
-       'profDetail',
+              'profDetail',
        'leaveModule',
        'profDetail',
        'PromotionModule'
@@ -11,14 +10,10 @@
        .config(['$routeProvider',
         function ($routeProvider) {
             $routeProvider.
-                 when('/profile view', {
-                     templateUrl: '../../../partials/profile view.html',
-                     controller: 'PersonalDetailsCtrl'
-                 }).
-                 when('/personal details update', {
-                     templateUrl: '../../../partials/personal details.html',
-                     controller: 'PersonalDetailsCtrl'
-                 }).
+                                 when('/personal details update', {
+                                     templateUrl: '../../../partials/personal details.html',
+                                     controller: 'PersonalDetailsCtrl'
+                                 }).
                  when('/educational background update', {
                      templateUrl: '../../../partials/educational background.html',
                      controller: 'EduBackgroundCtrl'
@@ -60,7 +55,7 @@
                      templateUrl: "../../../tables/LeaveTable.html"
                  }).
                otherwise({
-                   redirectTo: '/profile view'
+                   redirectTo: '/personal details update'
                });
         }])
 
