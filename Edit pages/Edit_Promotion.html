@@ -1,0 +1,107 @@
+﻿
+<div class="row">
+    <div class="col-lg-4">
+        <div class="panel panel-default box box-info">
+            <div class="panel-body">
+                <div class="page-header">
+                    <small>Staff</small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="panel panel-default box box-info">
+            <div class="panel-body">
+                <div class="page-header">
+                    <small>Assign Promotion</small>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                    </div>
+                    <div class="col-lg-8">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="employeeName" class="col-sm-2 control-label">Employee name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="employeeName" placeholder="Employee name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="date" class="col-sm-2 control-label">Date</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="date" placeholder="Date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="prePost" class="col-sm-2 control-label">Previous position</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="prePost" placeholder="Previous position">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="newPost" class="col-sm-2 control-label">New position</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="newPost" placeholder="New position">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment" class="col-sm-2 control-label">Comment</label>
+                                <div class="col-sm-10">
+                                    <textarea placeholder="Comment"></textarea>
+                                </div>
+                            </div>
+                            <div class="pull-right">
+                                <button class="btn btn-success btn-flat btn-group-lg">save</button>
+                                <button type="reset" class="btn btn-danger btn-flat btn-group-lg">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default box box-info">
+            <div class="panel-body">
+                <div class="page-header">
+                    <small>Staff Promotion</small>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <table class="table-responsive table table-hover table-condensed">
+                            <thead class="info">
+                            <th>#</th>
+                            <th>Grade</th>
+                            <th>Institution attended</th>
+                            <th>Course of study</th>
+                            <th>Professional certificate</th>
+                            <th>Start year</th>
+                            <th>End year</th>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="Promotion in PromotionData | filter:filter.name | limitTo:5" class="repeat-animation">
+                                    <th scope="row">*</th>
+                                    <td ng-bind="Promotion.grade"></td>
+                                    <td ng-bind="Promotion.instAt"></td>
+                                    <td ng-bind="Promotion.cOs"></td>
+                                    <td ng-bind="Promotion.profCert"></td>
+                                    <td ng-bind="Promotion.startYear"></td>
+                                    <td ng-bind="Promotion.endYear"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pull-right">
+                            <button class="btn btn-success btn-flat btn-group-lg">Finish</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
