@@ -12,21 +12,21 @@
     <link href="../../css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
     <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="Safhrms.png">
-    <link rel="/favicon/apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
-    <link rel="/favicon/apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
-    <link rel="/favicon/apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
-    <link rel="/favicon/apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
-    <link rel="/favicon/apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
-    <link rel="/favicon/apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
-    <link rel="/favicon/apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
-    <link rel="/favicon/apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
-    <link rel="/favicon/apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
-    <link rel="/favicon/icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
-    <link rel="/favicon/icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="/favicon/icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-    <link rel="/favicon/icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="/favicon/manifest" href="manifest.json">
+    <link rel="../../../icon" href="Safhrms.png">
+    <link rel="../../../favicon/apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="../../../favicon/apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="../../../favicon/apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="../../../favicon/apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="../../../favicon/apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="../../../favicon/apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="../../../favicon/apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="../../../favicon/apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="../../../favicon/apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="../../../favicon/icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="../../../favicon/icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="../../../favicon/icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="../../../favicon/icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="../../../favicon/manifest" href="manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -124,9 +124,13 @@
         <aside class="right-side">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <span id="date" class="pull-right"></span>
+                <div class="pull-right">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <span id="date"></span>
+                </div>
+                
                 <h1>
-                    Profile account
+                    <span class="glyphicon glyphicon glyphicon glyphicon-home" style="color:gray"></span> Profile account
                 </h1>
             </section>
             <!-- Main content -->
@@ -134,22 +138,20 @@
                 <div class="panel panel-default box box-info">
                     <div class="panel-body">
                         <div class="row" style="background-color:white">
-                            <div class="col-lg-1">
-                            </div>
-                            <div class="col-lg-10">
+                            <div class="col-lg-12">
                                 <ul class="nav nav-tabs">
-                                    <li class="active"><a aria-expanded="true" href="#home" data-toggle="tab">Profile details</a></li>
-                                    <li class=""><a aria-expanded="false" href="#edu" data-toggle="tab">Educational background</a></li>
-                                    <li class=""><a aria-expanded="false" href="#wd" data-toggle="tab">Work details</a></li>
-                                    <li class=""><a aria-expanded="false" href="#wExp" data-toggle="tab">Work experience</a></li>
-                                    <li class=""><a aria-expanded="false" href="#health" data-toggle="tab">Health details</a></li>
-                                    <li class=""><a aria-expanded="false" href="#leave" data-toggle="tab">Leave</a></li>
-                                    <li class=""><a aria-expanded="false" href="#pro" data-toggle="tab">Promotion</a></li>
+                                    <li class="active"><a aria-expanded="true" href="#home" data-toggle="tab"><span class="glyphicon glyphicon-bookmark"></span> Personal details</a></li>
+                                    <li class=""><a aria-expanded="false" href="#edu" data-toggle="tab"><span class="glyphicon glyphicon-pencil"></span> Educational background</a></li>
+                                    <li class=""><a aria-expanded="false" href="#wd" data-toggle="tab"><span class="glyphicon glyphicon-briefcase"></span> Work details</a></li>
+                                    <li class=""><a aria-expanded="false" href="#wExp" data-toggle="tab"><span class="glyphicon glyphicon-tasks"></span> Work experience</a></li>
+                                    <li class=""><a aria-expanded="false" href="#health" data-toggle="tab"><span class="glyphicon glyphicon-leaf"></span> Health details</a></li>
+                                    <li class=""><a aria-expanded="false" href="#leave" data-toggle="tab"><span class="glyphicon glyphicon-plane"></span> Leave</a></li>
+                                    <li class=""><a aria-expanded="false" href="#pro" data-toggle="tab"><span class="glyphicon glyphicon-thumbs-up"></span> Promotion</a></li>
                                 </ul>
                                 <div id="myTabContent" class="tab-content">
                                     <div class="tab-pane fade active in" id="home">
                                         <div class="page-header">
-                                            <h1>Personal <small>details</small></h1>
+                                            <h1><span class="glyphicon glyphicon-bookmark"></span> Personal <small>details</small></h1>
                                         </div>
                                         <table class="table table-responsive table-striped">
                                             <tr>
@@ -255,7 +257,7 @@
                                     </div>
                                     <div class="tab-pane fade " id="edu">
                                         <div class="page-header">
-                                            <h1>Educational <small>background</small></h1>
+                                            <h1><span class="glyphicon glyphicon-pencil"></span> Educational <small>background</small></h1>
                                         </div>
                                         <table class="table table-responsive table-striped">
                                             <tr>
@@ -441,8 +443,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-1">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -476,7 +476,7 @@
     <script src="../../../js/bootstrap.min.js"></script>
     <script src="../../../js/index.js"></script>
 
-
+    <a href="../../../favicon/android-icon-144x144.png"
 
 
 </body>
